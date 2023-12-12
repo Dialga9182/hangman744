@@ -27,9 +27,22 @@ class Hangman:
         self.list_of_guesses = [] # A list of the guesses that have already been tried.
     
     def check_guess(self, guess):
-        guess = guess.lower()
-        if guess in self.word:
+        guess = guess.lower() # Ensures guess is lowercase.
+        indices = [i for i, x in enumerate(self.word) if x == guess] # list of indices where guess in word.
+        lst_of_replacement_strings = [guess] * self.word.count(guess) # list of strings, all are guess.
+        if guess in self.word: # If guess can be found in word.
             print(f"Good guess! {guess} is in the word")
+            for letter in self.word: #for each letter in the random word picked
+                if letter == guess: #check if the letter is the one guessed
+                    for x,y in zip(indices,lst_of_replacement_strings): # Loop over x and y, feed in params.
+                    #for x element in indices, and for y element in lst_of...
+                        self.word_guessed[x] = y # Replaces element at an index x, with y
+                    #replace element stored at x index of self.word_guessed with element
+                    #stored at y in lst_of...
+            #print(self.num_letters)
+            self.num_letters -=1
+            #print(self.num_letters)
+            print(self.word_guessed)
         #else
         
     def ask_for_input(self):

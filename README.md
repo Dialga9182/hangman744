@@ -20,5 +20,4 @@ usage instructions
 TODO:
 file_structure_of_the_project
 # License information
-TODO:
-license_information
+Currently under a Unlicence: This license is used for dedicating works to the public domain, allowing users complete freedom to use, modify, and distribute the code without any restrictions

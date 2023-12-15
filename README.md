@@ -11,13 +11,18 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
 # Installation Instructions
-TODO:
-installation_instructions
+To install, simply pull this repo.
 # Usage Instructions
-TODO:
-usage instructions
+A game, once installed, double click on milestone 5 and the game will run. On both a lose condition and win condition the file will close immediately.
 # File Structure of the Project
-TODO:
-file_structure_of_the_project
+.
+├── build                   # Compiled files (alternatively `dist`)
+├── docs                    # Documentation files (alternatively `doc`)
+├── src                     # Source files (alternatively `lib` or `app`)
+├── test                    # Automated tests (alternatively `spec` or `tests`)
+├── tools                   # Tools and utilities
+├── LICENSE
+└── README.md
+this may be applicable.
 # License information
 Currently under a Unlicence: This license is used for dedicating works to the public domain, allowing users complete freedom to use, modify, and distribute the code without any restrictions

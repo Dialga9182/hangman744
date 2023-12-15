@@ -58,7 +58,7 @@ class Hangman:
         guess = guess.lower() # Ensures guess is lowercase.
         indices = [i for i, x in enumerate(self.word) if x == guess] # list of indices where guess in word.
         lst_of_replacement_strings = [guess] * self.word.count(guess) # list of strings, all are guess.
-        if guess in self.word: # If guess can be found in word.
+        if guess in self.word: # If guess can be found in word then.
             print(f"Good guess! {guess} is in the word")
             for letter in self.word: #for each letter in the random word picked
                 if letter == guess: #check if the letter is the one guessed
@@ -94,6 +94,24 @@ class Hangman:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
                 print(self.list_of_guesses)
+                break
 
-my_hangman_instance = Hangman(word_list)
-my_hangman_instance.ask_for_input()
+def play_game(word_list):
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
+    while True:
+        #print(game.num_lives)
+        #print(game.num_letters)
+        if game.num_lives == 0 or game.num_lives < 0:
+            print("You lost!")
+            break
+        if game.num_lives != 0 and not game.num_letters > 0:
+            print("Congratulations. You won the game!")
+            break
+        if game.num_letters >= 1:
+            game.ask_for_input()
+    return 5+5
+            
+if __name__ == '__main__':
+    word_list = ['apple', 'banana', 'cherry', 'dragonfruit', 'elderberry']
+    play_game(word_list)

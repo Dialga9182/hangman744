@@ -97,11 +97,15 @@ class Hangman:
                 break
 
 def play_game(word_list):
+    '''
+    Makes a variable num_lives and assigns it an integer value 5.
+    Creates an instance of the class Hangman and passes it parameters for word_list and num_lives.
+    Creates a while loop with win and lose conditions.
+    Upon these conditions, the file will close.
+    '''
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
-        #print(game.num_lives)
-        #print(game.num_letters)
         if game.num_lives == 0 or game.num_lives < 0:
             print("You lost!")
             break
